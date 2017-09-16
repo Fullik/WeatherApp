@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="foreCast"
+            type="com.pazaryan.weatherapp.data.entity.ForeCast"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/weather_icon"
+            bind:setDate="@{foreCast.foreCastDate}"
+            tools:text="22.19.2017"/>
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            bind:loadImage="@{foreCast.iconUrl}"
+            tools:src="@android:drawable/ic_media_pause"/>
+
+        <TextView
+            android:id="@+id/high_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/weather_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@{@string/high_temperature(foreCast.highTemperature)}"
+            tools:text="high = 45"/>
+
+        <TextView
+            android:id="@+id/low_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/high_temperature"
+            android:layout_below="@+id/high_temperature"
+            android:layout_marginTop="13dp"
+            android:text="@{@string/low_temperature(foreCast.lowTemperature)}"
+            tools:text="low = 45"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/low_temperature"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"/>
+
+    </RelativeLayout>
+</layout>

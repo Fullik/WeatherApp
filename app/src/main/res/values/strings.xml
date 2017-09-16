@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="current_weather">Current weather</string>
+    <string name="search_weather">Search Weather</string>
+    <string name="permission_error_text">Please give this application a location permission to proceed request</string>
+    <string name="give_permission">Give Location permission</string>
+    <string name="never_ask_selected">Please navigate to application settings screen to give app location permisson</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_location_error_text">Enable location to proceed request</string>
+    <string name="enable_location">Retry request</string>
+    <string name="high_temperature">High temperature: %s</string>
+    <string name="low_temperature">Low temperature: %s</string>
+    <string name="search">Search</string>
+    <string name="no_weather">No weather</string>
+</resources>
